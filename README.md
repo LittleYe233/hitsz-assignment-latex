@@ -47,7 +47,7 @@
 
 ## 示例
 
-可以在 [Releases](/releases/tag/v1.0.0) 中下载编译出的 PDF 文件。
+可以在 [Releases](https://github.com/LittleYe233/hitsz-assignment-latex/releases/tag/v1.0.0) 中下载编译出的 PDF 文件。
 
 ## 参考资料和许可证
 
@@ -55,7 +55,7 @@
 
 示例中使用的 Noto Serif CJK 字体位于 [GitHub](https://github.com/googlefonts/noto-cjk/)。
 
-这些资料可以在 [Releases](/releases/tag/other-resources) 中下载。
+这些资料可以在 [Releases](https://github.com/LittleYe233/hitsz-assignment-latex/releases/tag/other-resources) 中下载。
 
 其他参见 [LICENSE](LICENSE)。
 
