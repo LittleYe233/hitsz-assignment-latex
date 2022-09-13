@@ -48,8 +48,8 @@
 \RequirePackage{wrapfig}
 %% Graphicx specifies image path
 \RequirePackage{graphicx}
-\graphicspath{ {./} }
-%% AMS Math
+\graphicspath{ {./, ./figures, ./figure, ./images, ./image} }
+%% Math
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
