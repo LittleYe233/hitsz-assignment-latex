@@ -55,6 +55,9 @@
 \RequirePackage{amssymb}
 \RequirePackage{fourier}
 \RequirePackage{unicode-math}
+%% Font
+\RequirePackage{fontspec}
+\setmainfont{Noto Serif CJK SC}
 
 % Document variables
 \newcommand\homework[1]{%
