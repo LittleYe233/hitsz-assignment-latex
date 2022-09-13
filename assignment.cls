@@ -20,7 +20,7 @@
     autoindent = false
 }
 \setlength{\parindent}{0pt}
-\setCJKfamilyfont{zhsong}[BoldFont = NotoSerifCJK-Bold.ttc]{NotoSerifCJK-Regular.ttc}
+\setCJKfamilyfont{zhsong}{Noto Serif CJK SC}
 %% Geometry\setlength{\footheight}{10pt}
 %% IT MUST BE PLACED ABOVE FANCYHDR SETTINGS!
 \RequirePackage{geometry}
