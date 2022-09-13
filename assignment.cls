@@ -102,15 +102,15 @@
 % Define solving-problem block
 \newcommand{\solveprob}[3]{
     \vspace{-0.4cm}\section*{#1}\vspace{-0.3cm} % Avoid auto numbering
-    {#2}
-    \vspace{-0.4cm}\subsection*{解}\vspace{-0.2cm}
+    {#2}\par
+    \textbf{解}\par\vspace{-0.2cm}
     {#3}
 }
 
 % Define proving-problem block
 \newcommand{\proveprob}[2]{
-    \vspace{-0.4cm}\section*{#1}\vspace{-0.45cm} % Avoid auto numbering
-    \subsection*{证明}\vspace{-0.2cm}
+    \vspace{-0.4cm}\section*{#1}\vspace{-0.3cm}\par % Avoid auto numbering
+    \textbf{证明}\par
     {#2}
 }
 
