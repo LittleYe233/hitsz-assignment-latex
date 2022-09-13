@@ -53,6 +53,8 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
+\RequirePackage{fourier}
+\RequirePackage{unicode-math}
 
 % Document variables
 \newcommand\homework[1]{%
@@ -107,4 +109,21 @@
     \vspace{-0.4cm}\section*{#1}\vspace{-0.45cm} % Avoid auto numbering
     \subsection*{证明}\vspace{-0.2cm}
     {#2}
+}
+
+% Define `\arc' command
+% See: https://tex.stackexchange.com/a/284787
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+
+\newcommand{\arc@arc}[2]{%
+  \sbox0{$\m@th#1#2$}%
+  \vbox{
+    \hbox{\resizebox{\wd0}{\height}{\arc@char}}
+    \nointerlineskip
+    \box0
+  }%
 }
