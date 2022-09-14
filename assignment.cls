@@ -44,6 +44,7 @@
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
 \titleformat*{\subsubsection}{\normalsize\bfseries}
+\titlespacing*{\subsubsection}{0pt}{0ex}{0ex}
 %% Setspace
 \RequirePackage{setspace}
 %% Wrap Figure
