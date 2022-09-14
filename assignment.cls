@@ -117,6 +117,9 @@
     {#2}
 }
 
+% Define sub-problem command
+\newcommand{\subprob}[1]{\subsubsection*{#1}}
+
 % Define `\arc' command
 % See: https://tex.stackexchange.com/a/284787
 \DeclareFontFamily{U}{tipa}{}
