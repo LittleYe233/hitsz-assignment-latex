@@ -107,8 +107,13 @@
 % Define "解" and "证明"
 % \newcommand{\solve*}{\textbf{解}}
 % \newcommand{\prove*}{\textbf{证明}}
-\newcommand{\solve}{\textbf{解}\par}
-\newcommand{\prove}{\textbf{证明}\par}
+\newcommand{\solve}{\par\textbf{解}\par}
+\newcommand{\prove}{\par\textbf{证明}\par}
+
+% Define section-only problem block
+\newcommand{\prob}[1]{
+    \subsection*{#1}
+}
 
 % Define solving-problem block
 \newcommand{\solveprob}[3]{
