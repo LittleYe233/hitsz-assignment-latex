@@ -11,76 +11,78 @@
 \begin{document}
     \maketitle
 
-    \probset{练习 1}
+    \begin{multicols}{2}
+        \probset{练习 1}
 
-    % Problem 1-1
-    \prob{1-1}
-        $114,514.$
-    \solve
-        \subprob{(1)}
+        % Problem 1-1
+        \prob{1-1}
+            $114,514.$
+        \solve
+            \subprob{(1)}
 
-        测试文字. $\text{Not implemented.}$\ 测试文字. $\text{Not implemented.}$
+            测试文字. $\text{Not implemented.}$\ 测试文字. $\text{Not implemented.}$
+
+            \begin{eq*}
+                \sum\limits_{i=1}^{n}P(A_i)=P(\sum\limits_{i=1}^{n}A_i).
+            \end{eq*}
+
+            测试文字. $\text{Not implemented.}$\ 测试文字. $\text{Not implemented.}$
         
-        \begin{eq*}
-            \sum\limits_{i=1}^{n}P(A_i)=P(\sum\limits_{i=1}^{n}A_i).
-        \end{eq*}
+        % Problem 1-2
+        \proveprob{1.}{
+            测试 test.
 
-        测试文字. $\text{Not implemented.}$\ 测试文字. $\text{Not implemented.}$
-    
-    % Problem 1-2
-    \proveprob{1.}{
-        测试 test.
+            $\arc{abc}$.
+        }
 
-        $\arc{abc}$.
-    }
+        \probset{练习 2}
 
-    \probset{练习 2}
+        \solveprob{1.}{}{
+            \subprob{(1)}
 
-    \solveprob{1.}{}{
+            $\dfrac{1}{3+2i}=\dfrac{3-2i}{(3+2i)(3-2i)}=\dfrac{3-2i}{13}$.
+
+            模长为 $\dfrac{\sqrt{13}}{13}$, 辐角为 $\arctan\left(-\dfrac{2}{3}\right)+2k\pi(k\in\mathbb{Z})$.
+
+            \subprob{(2)}
+
+            $\dfrac{1}{i}-\dfrac{3i}{1-i}=\dfrac{3-5i}{2}$.
+
+            模长为 $\dfrac{\sqrt{34}}{2}$, 辐角为 $\arctan\left(-\dfrac{5}{3}\right)+2k\pi(k\in\mathbb{Z})$.
+        }
+
+        \solveprob{2.}{}{
+            若题设等式成立, 则有
+
+            \begin{eq*}
+                x+1+(y-3)i=2+8i.
+            \end{eq*}
+
+            则
+
+            \begin{eq*}
+                \begin{cases}
+                    x+1=2\\
+                    y-3=8.
+                \end{cases}
+            \end{eq*}
+
+            解得 $x=1,y=11$.
+        }
+
+        \probset{练习 3}
+
+        \prob{1. 混合练习题}
+            (1) $E=mc^2$.
         \subprob{(1)}
-
-        $\dfrac{1}{3+2i}=\dfrac{3-2i}{(3+2i)(3-2i)}=\dfrac{3-2i}{13}$.
-
-        模长为 $\dfrac{\sqrt{13}}{13}$, 辐角为 $\arctan\left(-\dfrac{2}{3}\right)+2k\pi(k\in\mathbb{Z})$.
-
+        \solve
+            \begin{eq*}
+                E=mc^2.
+            \end{eq*}
         \subprob{(2)}
-
-        $\dfrac{1}{i}-\dfrac{3i}{1-i}=\dfrac{3-5i}{2}$.
-
-        模长为 $\dfrac{\sqrt{34}}{2}$, 辐角为 $\arctan\left(-\dfrac{5}{3}\right)+2k\pi(k\in\mathbb{Z})$.
-    }
-
-    \solveprob{2.}{}{
-        若题设等式成立, 则有
-
-        \begin{eq*}
-            x+1+(y-3)i=2+8i.
-        \end{eq*}
-
-        则
-
-        \begin{eq*}
-            \begin{cases}
-                x+1=2\\
-                y-3=8.
-            \end{cases}
-        \end{eq*}
-
-        解得 $x=1,y=11$.
-    }
-
-    \probset{练习 3}
-
-    \prob{1. 混合练习题}
-        (1) $E=mc^2$.
-    \subprob{(1)}
-    \solve
-        \begin{eq*}
-            E=mc^2.
-        \end{eq*}
-    \subprob{(2)}
-    \prove
-        \begin{eq*}
-            a^2+b^2=c^2.
-        \end{eq*}
+        \prove
+            \begin{eq*}
+                a^2+b^2=c^2.
+            \end{eq*}
+    \end{multicols}
 \end{document}
