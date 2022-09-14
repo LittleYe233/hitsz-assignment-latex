@@ -35,9 +35,15 @@
 
 ### 多级标题
 
-题号和“解”“证明”分别对应 `\section` 和 `\subsection` 两个级别的标题。
+`\section*`、`\subsection*`、`\subsubsection*` 分别表示题目集、题目和子题目层级。这些也分别可以用语义化的 `\probset`、`\prob`、`\subprob` 代替。
 
 ### 解答题和证明题
+
+#### v2.x
+
+请使用 `\prob{<prob-id>}` 放置题目的题号，并使用 `\solve` 和 `\prove` 分别表示“解”和“证明”（均具有前后分段 `\par`）。
+
+#### v1.x
 
 解答题和证明题分别使用两个命令 `\solveprob{<prob-id>}{<answer>}{<solution>}` 和 `\proveprob{<prob-id>}{<proof>}` 实现。第一个参数为题号；`\solveprob` 第二个参数为答案，第三个参数为解答过程；`\proveprob` 的第二个参数为证明过程。
 
@@ -47,7 +53,26 @@
 
 ## 示例
 
-可以在 [Releases](https://github.com/LittleYe233/hitsz-assignment-latex/releases/tag/v1.0.0) 中下载编译出的 PDF 文件。
+可以在 [Releases](https://github.com/LittleYe233/hitsz-assignment-latex/releases/latest) 中下载编译出的 PDF 文件。
+
+## 迁移说明
+
+### 从 v1.x 至 v2.x
+
+本次大版本更新对旧版本做了向后兼容，因此旧版本下的 LaTeX 文档通常也能正常编译。若需要使用新版本的功能，请参考如下指导操作。
+
+需要注意的是以下的指导未必对文档中的所有需要更新的元素有效（基于正则表达式的简单替换难以解决语义分析问题），请根据自己的文档做适当修改：
+
+- 安装 Noto Serif CJK 字体并保证简体中文（SC）变体存在；
+- 正则表达式替换（开启 `/m` 和 `/g` 的 flag）：
+  - `\\chapter` -> `\probset`
+  - `^(.*)\\solveprob\{(.*)\}\{(.*)\}\{\n(\s*)` -> `$1\prob{$2}\n$1$3\n$1\solve\n$4`
+  - `^(.*)\\proveprob\{(.*)\}\{\n(\s*)` -> `$1\prob{$2}\n$1\prove\n$3`
+  - `\\textbf` -> `\subprob`
+  - `\s+\}` -> ``
+  - `\$\$([\s\S]+?)\$\$` -> `\begin{eq*}$1\end{eq*}`
+  - `\{align\*\}` -> `{aligned}` （如果被嵌套在 `eq*` 中）
+  - `\{\multiline*\}` -> `{multilined}` （如果被嵌套在 `eq*` 中）
 
 ## 参考资料和许可证
 
