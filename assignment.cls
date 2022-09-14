@@ -63,6 +63,9 @@
 %% Font
 \RequirePackage{fontspec}
 \setmainfont{Noto Serif CJK SC}
+%% Multi-column
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 
 % Document variables
 \newcommand\homework[1]{%
