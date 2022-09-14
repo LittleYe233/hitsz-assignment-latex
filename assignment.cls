@@ -132,3 +132,19 @@
     \box0
   }%
 }
+
+% Define new equation Environment
+% See: https://tex.stackexchange.com/a/287246
+\newenvironment{eq*}{
+    \vspace{-1em}
+    \begin{equation*}
+}{
+    \end{equation*}
+}
+
+\newenvironment{eq}{
+    \vspace{-1em}
+    \begin{equation}
+}{
+    \end{equation}
+}
