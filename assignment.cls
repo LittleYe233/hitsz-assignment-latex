@@ -110,6 +110,9 @@
 \newcommand{\solve}{\par\textbf{解}\par}
 \newcommand{\prove}{\par\textbf{证明}\par}
 
+% Define problem-set
+\newcommand{\probset}{\section*}
+
 % Define section-only problem block
 \newcommand{\prob}[1]{
     \subsection*{#1}
