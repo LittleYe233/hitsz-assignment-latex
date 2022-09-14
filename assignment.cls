@@ -102,18 +102,24 @@
     \vspace{-0.6cm}
 }
 
+% Define "解" and "证明"
+% \newcommand{\solve*}{\textbf{解}}
+% \newcommand{\prove*}{\textbf{证明}}
+\newcommand{\solve}{\textbf{解}\par}
+\newcommand{\prove}{\textbf{证明}\par}
+
 % Define solving-problem block
 \newcommand{\solveprob}[3]{
     \vspace{-0.4cm}\subsection*{#1}\vspace{-0.3cm} % Avoid auto numbering
     {#2}\par
-    \textbf{解}\par
+    \solve
     {#3}
 }
 
 % Define proving-problem block
 \newcommand{\proveprob}[2]{
     \vspace{-0.4cm}\subsection*{#1}\vspace{-0.3cm}\par % Avoid auto numbering
-    \textbf{证明}\par
+    \prove
     {#2}
 }
 
