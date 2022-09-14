@@ -41,7 +41,9 @@
 %% Title
 \RequirePackage{titling}
 \RequirePackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
 %% Setspace
 \RequirePackage{setspace}
 %% Wrap Figure
@@ -101,15 +103,15 @@
 
 % Define solving-problem block
 \newcommand{\solveprob}[3]{
-    \vspace{-0.4cm}\section*{#1}\vspace{-0.3cm} % Avoid auto numbering
+    \vspace{-0.4cm}\subsection*{#1}\vspace{-0.3cm} % Avoid auto numbering
     {#2}\par
-    \textbf{解}\par\vspace{-0.2cm}
+    \textbf{解}\par
     {#3}
 }
 
 % Define proving-problem block
 \newcommand{\proveprob}[2]{
-    \vspace{-0.4cm}\section*{#1}\vspace{-0.3cm}\par % Avoid auto numbering
+    \vspace{-0.4cm}\subsection*{#1}\vspace{-0.3cm}\par % Avoid auto numbering
     \textbf{证明}\par
     {#2}
 }
