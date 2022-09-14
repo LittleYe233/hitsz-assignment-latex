@@ -44,6 +44,8 @@
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
 \titleformat*{\subsubsection}{\normalsize\bfseries}
+\titlespacing*{\section}{0pt}{0ex}{0ex}
+\titlespacing*{\subsection}{0pt}{0ex}{0ex}
 \titlespacing*{\subsubsection}{0pt}{0ex}{0ex}
 %% Setspace
 \RequirePackage{setspace}
@@ -110,7 +112,7 @@
 
 % Define solving-problem block
 \newcommand{\solveprob}[3]{
-    \vspace{-0.4cm}\subsection*{#1}\vspace{-0.3cm} % Avoid auto numbering
+    \subsection*{#1} % Avoid auto numbering
     {#2}\par
     \solve
     {#3}
@@ -118,7 +120,7 @@
 
 % Define proving-problem block
 \newcommand{\proveprob}[2]{
-    \vspace{-0.4cm}\subsection*{#1}\vspace{-0.3cm}\par % Avoid auto numbering
+    \subsection*{#1}\par % Avoid auto numbering
     \prove
     {#2}
 }
