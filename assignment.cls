@@ -51,6 +51,7 @@
 \RequirePackage{setspace}
 %% Wrap Figure
 \RequirePackage{wrapfig}
+\RequirePackage{wrapstuff}
 %% Graphicx specifies image path
 \RequirePackage{graphicx}
 \graphicspath{ {./, ./figures, ./figure, ./images, ./image} }
@@ -66,16 +67,19 @@
 %% Multi-column
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
+%% Xifthen
+\RequirePackage{xifthen}
 
 % Document variables
+% See: https://tex.stackexchange.com/a/286903
 \newcommand\homework[1]{%
-    \newcommand{\asm@tokens@homework}{#1}}
+    \def\asm@tokens@homework{#1}}
 \newcommand*\stuno[1]{%
-    \newcommand{\asm@tokens@stuno}{#1}}
+    \def\asm@tokens@stuno{#1}}
 \newcommand*\stumajor[1]{%
-    \newcommand{\asm@tokens@stumajor}{#1}}
+    \def\asm@tokens@stumajor{#1}}
 \newcommand*\portrait[1]{%
-    \newcommand{\asm@tokens@portrait}{#1}}
+    \def\asm@tokens@portrait{#1}}
 
 % Define title block
 \renewcommand{\maketitle}{
@@ -84,10 +88,13 @@
         % Identity block start
         \begin{normalsize}
             \begin{spacing}{2.5}
-                \begin{wrapfigure}{r}{0pt}
-                    \centering\includegraphics[height=85pt]{\asm@tokens@portrait}
-                \end{wrapfigure}
-
+                \if\asm@tokens@portrait\empty
+                \else
+                    \begin{wrapfigure}{r}{0pt}
+                        \centering\includegraphics[height=85pt]{\asm@tokens@portrait}
+                    \end{wrapfigure}
+                \fi
+                
                 \textbf{作者:\ }\theauthor      \\
                 \textbf{学号:\ }\asm@tokens@stuno       \\
                 \textbf{专业:\ }\asm@tokens@stumajor
@@ -159,7 +166,7 @@
 % Define new equation Environment
 % See: https://tex.stackexchange.com/a/287246
 \newenvironment{eq*}{
-    \vspace{-1em}
+    \vspace*{-1em}
     \begin{equation*}
 }{
     \end{equation*}
